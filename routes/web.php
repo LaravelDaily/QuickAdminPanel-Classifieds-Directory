@@ -1,6 +1,9 @@
 <?php
+Route::get('/', 'HomePageController@index');
+Route::get('search', 'HomePageController@table')->name('search');
+Route::get('categories/{category}', 'HomePageController@category')->name('category');
+Route::get('companies/{company}', 'HomePageController@company')->name('company');
 
-Route::redirect('/', '/login');
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
