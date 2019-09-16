@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Classimax',
+    'site_title' => 'Classifieds',
 ];

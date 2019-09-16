@@ -2,14 +2,36 @@
     <nav class="sidebar-nav">
 
         <ul class="nav">
-            <li class="nav-item">
-                <a href="{{ route("admin.home") }}" class="nav-link">
-                    <i class="nav-icon fas fa-fw fa-tachometer-alt">
+            @can('company_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.companies.index") }}" class="nav-link {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
 
-                    </i>
-                    {{ trans('global.dashboard') }}
-                </a>
-            </li>
+                        </i>
+                        {{ trans('cruds.company.title') }}
+                    </a>
+                </li>
+            @endcan
+            @can('city_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.cities.index") }}" class="nav-link {{ request()->is('admin/cities') || request()->is('admin/cities/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
+
+                        </i>
+                        {{ trans('cruds.city.title') }}
+                    </a>
+                </li>
+            @endcan
+            @can('category_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
+
+                        </i>
+                        {{ trans('cruds.category.title') }}
+                    </a>
+                </li>
+            @endcan
             @can('user_management_access')
                 <li class="nav-item nav-dropdown">
                     <a class="nav-link  nav-dropdown-toggle" href="#">
@@ -50,36 +72,6 @@
                             </li>
                         @endcan
                     </ul>
-                </li>
-            @endcan
-            @can('city_access')
-                <li class="nav-item">
-                    <a href="{{ route("admin.cities.index") }}" class="nav-link {{ request()->is('admin/cities') || request()->is('admin/cities/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
-
-                        </i>
-                        {{ trans('cruds.city.title') }}
-                    </a>
-                </li>
-            @endcan
-            @can('category_access')
-                <li class="nav-item">
-                    <a href="{{ route("admin.categories.index") }}" class="nav-link {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
-
-                        </i>
-                        {{ trans('cruds.category.title') }}
-                    </a>
-                </li>
-            @endcan
-            @can('company_access')
-                <li class="nav-item">
-                    <a href="{{ route("admin.companies.index") }}" class="nav-link {{ request()->is('admin/companies') || request()->is('admin/companies/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-cogs nav-icon">
-
-                        </i>
-                        {{ trans('cruds.company.title') }}
-                    </a>
                 </li>
             @endcan
             <li class="nav-item">
