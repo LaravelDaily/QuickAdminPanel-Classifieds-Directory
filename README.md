@@ -2,7 +2,7 @@
 
 Simple project with classifieds database of companies/services/cities.
 
-![Laravel Classimax screenshot](https://laraveldaily.com/wp-content/uploads/2019/09/Screen-Shot-2019-09-16-at-1.11.09-PM.png)
+![Laravel Classimax screenshot](https://laraveldaily.com/wp-content/uploads/2019/09/Screen-Shot-2019-09-17-at-7.42.42-PM.png)
 
 Front-end view is based on free Bootstrap template: [Classimax](https://themefisher.com/downloads/classimax-bootstrap-classified-responsive-theme/)
 
