@@ -1,4 +1,4 @@
-# Laravel 8 Classifieds Directory demo
+# Laravel 9 Classifieds Directory demo
 
 Simple project with classifieds database of companies/services/cities.
 
@@ -22,6 +22,7 @@ Adminpanel is generated with Laravel generator: [QuickAdminPanel.com](https://qu
 - Run __php artisan migrate --seed__ (it has some seeded data for your testing)
 - That's it: launch the main URL. 
 - You can login to adminpanel with default credentials __admin@admin.com__ - __password__
+- Create simbolic link if needed __php artisan storage:link__
 
 ## License
 
